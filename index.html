@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailor Shop Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Tailor Shop Suit Entry</h2>
+
+  <form id="suitForm">
+    <label>Name: <input name="name" /></label>
+    <label>Sr. No: <input name="Srno" /></label>
+    <label>Address: <input name="address" /></label>
+    <label>Length (लंबाई): <input name="लंबाई" /></label>
+    <label>Chest (छाती): <input name="छाती" /></label>
+    <label>Waist (कमर): <input name="कमर" /></label>
+    <label>Hip (हिप): <input name="हिप" /></label>
+    <label>Ghera (घेरा): <input name="घेरा" /></label>
+    <label>Chak (चाक): <input name="चाक" /></label>
+    <label>Tira (तीरा): <input name="तीरा" /></label>
+    <label>Baju (भाजु): <input name="भाजु" /></label>
+    <label>Gala (गला): <input name="गला" /></label>
+    <label>Salwar (सलवार): <input name="सलवार" /></label>
+    <label>Mohri (मोहरी): <input name="मोहरी" /></label>
+    <label>Thigh (थाई): <input name="थाई" /></label>
+    <label>Price: <input name="Price" /></label>
+    <label>Quantity: <input name="quantity" /></label>
+    <button type="submit">Add Suit</button>
+    <label>Status:</label>
+<label><input type="radio" name="status" value="in processing" checked> In Processing</label>
+<label><input type="radio" name="status" value="complete"> Complete</label>
+
+  </form>
+
+  <div class="action-buttons">
+  <button onclick="exportToPDF()">Export to PDF</button>
+  <button onclick="undoLastDelete()">Undo Delete</button>
+</div>
+
+  <input type="text" id="search" placeholder="Search by Name or Sr. No">
+
+  <h3>All Suits</h3>
+  <div id="suitList"></div>
+
+  <div class="modal" id="detailModal">
+    <span class="modal-close" onclick="closeModal()">✖</span>
+    <div id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
